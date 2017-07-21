@@ -3,21 +3,46 @@
 <head>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
 </head>
 
 <body>
 
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="portfolio.html">Home</a>
-      <a href="gwc.html">GWC</a>
-      <a href="#">Animal Awareness</a>
-      <a href="aboutme1.html">About Me</a>
+  <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+    onclick="w3_close()">Close &times;</button>
+    <a href="portfolio.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gwc.html" class="w3-bar-item w3-button">GWC</a>
+    <a href="aboutme1.html" class="w3-bar-item w3-button">About me</a>
+    <a href="#" class="w3-bar-item w3-button">Animal Awareness</a>
+  </div>
+
+  <div zclass="w3-main" id="main">
+
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h1 align="right">CAROLINA </h1>
     </div>
   </div>
 
+
+
+  <script>
+  function w3_open() {
+    document.getElementById("main").style.marginLeft = "50%";
+    document.getElementById("mySidebar").style.width = "50%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+  }
+  function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+  }
+  </script>
 
 <h2> About me</h1>
    <p>I am a rising senior in high school and I am learning how to code!<br> I love animals so I will dedicate some of this page to them</p>
